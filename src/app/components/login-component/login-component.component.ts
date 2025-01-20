@@ -1,17 +1,18 @@
 import { Component, NgModule } from '@angular/core';
-import { UserService } from '../../services/user.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
 
+import { UserService } from '../../services/userService/user.service';
+
 @Component({
   selector: 'app-login-component',
   imports: [FormsModule, CommonModule, RouterLink],
-templateUrl: './login-component.component.html',
+  templateUrl: './login-component.component.html',
   styleUrl: './login-component.component.css',
 })
 export class LoginComponentComponent {
-  errorMessage=null;
+  errorMessage = null;
   email: string = '';
   password: string = '';
   constructor(private userService: UserService, private Router: Router) {}
