@@ -1,1 +1,44 @@
-<p>login-component works!</p>
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+  <div class="card shadow-lg" style="width: 100%; max-width: 450px">
+    <div class="card-body">
+      <h4 class="card-title text-center mb-5">Sign In</h4>
+      <form (ngSubmit)="onSubmit()">
+        <div class="mb-4">
+          <label for="exampleInputEmail1" class="form-label"
+            >Email address</label
+          >
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            [(ngModel)]="email"
+          />
+          <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+        <div class="mb-4">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            [(ngModel)]="password"
+          />
+        </div>
+        <div class="mb-3 form-check">
+          <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+            {{ errorMessage }}
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <pre
+        class="bg-light p-3 rounded"
+      >Don't have an account? <a class="text-primary text-decoration-none fw-bold" routerLink="/register">SignUp</a></pre>
+    </div>
+  </div>
+</div>

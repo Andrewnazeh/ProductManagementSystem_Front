@@ -1,0 +1,8 @@
+   .footer {
+      background-color: #343a40; /* Dark background */
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      position: relative;
+      width: 100%;
+    }
