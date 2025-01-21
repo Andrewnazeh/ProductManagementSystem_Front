@@ -1,9 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { UserService } from '../../services/user.service';
+import { UserService } from '../../services/userService/user.service';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
-
 
 @Component({
   selector: 'app-register-component',
@@ -28,7 +27,7 @@ export class RegisterComponentComponent {
       },
       error: (err) => {
         this.errorMessage = err.error.message;
-      }
+      },
     });
   }
 }
